@@ -1,0 +1,61 @@
+<?=validation_errors()?>
+<form role="form" method="post">
+  <div class="content row">
+    <section class="main col col-lg-12">
+      <div class="row">
+        <h2 class="col-lg-offset-1">Post a listing</h2>
+
+        <div class="col-lg-10 col-lg-offset-1 post-main">
+          <div class="row">
+            <section class="col-lg-5">
+              <div class="form-group">
+                <label class="sr-only" for="postTitle">Post title</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Post title"></input>
+              </div>
+            </section>
+
+            <section class="col-lg-3">
+              <div class="input-group">
+                <span class="input-group-addon">₩</span>
+                <input type="text" class="form-control" id="price" name="price" placeholder="Price"></input>
+              </div>
+            </section>
+          </div>
+          <div class="form-group">
+            <label for="body">Description</label>
+            <textarea class="form-control" id="body" name="body" rows="10"></textarea>
+          </div>
+          <section class="row">
+            <div class="form-group col-lg-4">
+              <label for="postEmail">Reply to</label>
+              <input type="email" class="form-control" id="postEmail" name="email" placeholder="Enter your email">
+            </div>
+          </section>
+          <section class="row">
+            <div class="form-group col-lg-4">
+              <input type="email" class="form-control" id="postEmail" name="email" placeholder="Enter your email again">
+            </div>
+          </section>
+          
+          <button type="submit" class="btn btn-default btn-sm pull-right">Submit</button>
+
+        </div> <!-- post-main -->
+      </div>
+    </section> <!-- main -->
+    <div class="row">
+      <h3 class="loc-heading">Choose your pictures</h3>
+      <div class="col-lg-10 col-lg-offset-1 pics-upload">
+        <div class="form-group">
+          <label for="postPic">Upload Pictures</label>
+          <input type="file" id="postPic">
+          <p class="help-block">You can choose up to four pictures. The first picture will be used as the 
+            featured picture for your post.</p>
+            <img src="<?php echo base_url().'assets/imgs/image1.jpg' ?>" class="img-thumbnail">
+            <img src="<?php echo base_url().'assets/imgs/image2.jpg' ?>" class="img-thumbnail">
+            <img src="<?php echo base_url().'assets/imgs/image3.jpg' ?>" class="img-thumbnail">
+            <img src="<?php echo base_url().'assets/imgs/image4.jpg' ?>" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </div> <!-- content -->
+  </form>
